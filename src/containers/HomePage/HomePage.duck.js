@@ -28,7 +28,7 @@ const fetchBooksError = e => ({ type: FETCH_BOOKS_ERROR, payload: e });
 
 export const fetchBooks = () => (dispatch, getState, axios) => {
     dispatch(fetchBooksRequest());
-    return axios.get('/api/books')
+    return axios.get('http://localhost:5000/api/books')
         .then(response => dispatch(fetchBooksSuccess(response.data)))
         .catch(err => dispatch(fetchBooksError(err)));
 }

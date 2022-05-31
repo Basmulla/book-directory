@@ -62,7 +62,7 @@ const deleteBookError = e => ({ type: DELETE_BOOK_ERROR, payload: e });
 
 export const fetchBook = id => (dispatch, getState, axios) => {
     dispatch(fetchBookRequest());
-    return axios.get(`/api/books/${id}`)
+    return axios.get(`/${id}`)
         .then(response => dispatch(fetchBookSuccess(response.data)))
         .catch(err => dispatch(fetchBookError(err)));
 }
@@ -70,14 +70,14 @@ export const fetchBook = id => (dispatch, getState, axios) => {
 export const updateBook = params => (dispatch, getState, axios) => {
     const { isbn, ...updatedValues } = params;
     dispatch(updateBookRequest());
-    return axios.put(`/api/books/${isbn}`, updatedValues)
+    return axios.put(`/${isbn}`, updatedValues)
         .then(response => dispatch(updateBookSuccess(response.data)))
         .catch(err => dispatch(updateBookError(err)));
 }
 
 export const deleteBook = id => (dispatch, getState, axios) => {
     dispatch(deleteBookRequest());
-    return axios.delete(`/api/books/${id}`)
+    return axios.delete(`/${id}`)
         .then(() => dispatch(deleteBookSuccess))
         .catch(err => dispatch(deleteBookError(err)));
 }
