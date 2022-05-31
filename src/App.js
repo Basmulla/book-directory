@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Redirect, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Redirect, Routes } from 'react-router-dom';
 import {EditBookPage, HomePage} from './containers';
 
 function App() {
