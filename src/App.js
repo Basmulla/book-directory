@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Redirect, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Navigate, Routes } from 'react-router-dom';
 import {EditBookPage, HomePage} from './containers';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" render={() => (
-            <Redirect to="/book-directory-client" />
+            <Navigate to="/book-directory-client" />
           )} />
           <Route exact path="/book-directory-client" element={<HomePage/>} />
         <Route exact path="/book-directory-client/:id" element={<EditBookPage/>} />
