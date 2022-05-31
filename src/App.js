@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/book-directory-client" element={<HomePage/>} />
-        <Route exact path="/:id" element={<EditBookPage/>} />
+        <Route exact path="/book-directory-client/:id" element={<EditBookPage/>} />
       </Routes>
     </Router>
   );
