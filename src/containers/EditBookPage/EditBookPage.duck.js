@@ -70,14 +70,14 @@ export const fetchBook = id => (dispatch, getState, axios) => {
 export const updateBook = params => (dispatch, getState, axios) => {
     const { isbn, ...updatedValues } = params;
     dispatch(updateBookRequest());
-    return axios.put(`/${isbn}`, updatedValues)
+    return axios.put(`http://localhost:5000/api/books/${isbn}`, updatedValues)
         .then(response => dispatch(updateBookSuccess(response.data)))
         .catch(err => dispatch(updateBookError(err)));
 }
 
 export const deleteBook = id => (dispatch, getState, axios) => {
     dispatch(deleteBookRequest());
-    return axios.delete(`/${id}`)
+    return axios.delete(`http://localhost:5000/api/books/${id}`)
         .then(() => dispatch(deleteBookSuccess))
         .catch(err => dispatch(deleteBookError(err)));
 }
