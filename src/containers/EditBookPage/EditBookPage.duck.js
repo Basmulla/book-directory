@@ -62,7 +62,7 @@ const deleteBookError = e => ({ type: DELETE_BOOK_ERROR, payload: e });
 
 export const fetchBook = id => (dispatch, getState, axios) => {
     dispatch(fetchBookRequest());
-    return axios.get(`/${id}`)
+    return axios.get(`http://localhost:5000/api/books/${id}`)
         .then(response => dispatch(fetchBookSuccess(response.data)))
         .catch(err => dispatch(fetchBookError(err)));
 }
