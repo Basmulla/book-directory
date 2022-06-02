@@ -1,0 +1,23 @@
+header {
+    margin: 7px;
+    background-color: #ffffff;
+    font-family: arial;
+    font-size: 17px;
+  }  
+  
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+  }
+
+  .topnav img {
+    border-radius: 50%;
+    border: 5px solid rgb(8, 8, 8);
+    margin: 5px;
+  }
+
+  h2 {
+    margin: 0px 485px;
+    text-align: center;
+  }
