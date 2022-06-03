@@ -7,7 +7,7 @@ class Header extends React.Component {
         return (
             <header>
                     <div className="topnav">
-                        <a><NavLink to="/book-directory-client" activeclassname="active">Home Page</NavLink></a>
+                        <NavLink to="/book-directory-client" activeclassname="active">Home Page</NavLink>
                     </div>
                 <h2>Book Directory API Website</h2>
             </header>
