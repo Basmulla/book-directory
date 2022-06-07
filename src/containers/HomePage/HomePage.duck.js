@@ -28,7 +28,7 @@ const fetchBooksError = e => ({ type: FETCH_BOOKS_ERROR, payload: e });
 
 export const fetchBooks = () => (dispatch, getState, axios) => {
     dispatch(fetchBooksRequest());
-    return axios.get('/api/books/')
+    return axios.get('https://book-directory-rest-api.herokuapp.com/api/books')
         .then(response => dispatch(fetchBooksSuccess(response.data)))
         .catch(err => dispatch(fetchBooksError(err)));
 }
