@@ -7,7 +7,7 @@ class Header extends React.Component {
         return (
             <header>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-                <div class="topnav">
+                <div className='topnav'>
                     <img src={process.env.PUBLIC_URL + "/images/Atekulla_Basmulla Avatar.png"} width="45" height="45" alt="Avatar" />
                     &nbsp;
                     <a><NavLink to="/book-directory-client" activeclassname="active"><i class="fa fa-fw fa-home"></i>Home</NavLink></a>

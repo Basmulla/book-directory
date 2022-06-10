@@ -5,7 +5,7 @@ import {
 import {EditBookPage, HomePage} from './containers';
 import Header from './components/Header/Header';
 
-import './Header.module.css';
+import './App.css';
 
 function App() {
   return (
